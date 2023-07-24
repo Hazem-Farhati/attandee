@@ -11,9 +11,9 @@ if(isset($_POST['submit'])){
   $specialty = $_POST['speciality'] ;
   $isSuccess = $crud->insert($fname,$lname,$dob,$email,$phone,$specialty);
   if($isSuccess){
-echo '<h1 class="text-center text-success">You have been registred!</h1>';
+    include 'includes/successmessage.php';
   }else{
-echo '<h1 class="text-center text-danger">there was an error!</h1>';
+    include 'includes/errormessage.php';
 
   }
 }
